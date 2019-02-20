@@ -38,7 +38,7 @@ The path to your input data files
 parameters$choices_label<-""
 parameters$survey_label<-""
 ```
-Columns' name to use to extract all the questions and chocies. **IF YOU USE MORE THAN ONE LANGUAGE IN YOUR SURVEY, YOU NEED TO MOVE YOUR COLUMN OF INTEREST BEFORE THE OTHER LABEL COLUMNS**   
+Columns' name to use to extract all the questions and chocies. **IF YOU USE MORE THAN ONE LANGUAGE IN YOUR SURVEY, YOU NEED TO MOVE YOUR COLUMN OF INTEREST BEFORE THE OTHER LABEL COLUMNS IN YOUR CSV FILES**   
 ```
 parameters$right_to_left <- TRUE/FALSE
 ```

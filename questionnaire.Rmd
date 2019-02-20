@@ -1,0 +1,60 @@
+---
+title:
+  "`r parameters$title`"
+output:
+  html_document:
+    include:
+      before_body: NULL
+      after_body: NULL
+css: style.css
+---
+```{r}
+
+```
+
+```{r results="asis", echo=FALSE}
+if (parameters$right_to_left){
+cat("
+<style>
+p {
+  direction: rtl;
+}
+</style>
+")
+}
+```
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(comment = NA)
+
+```
+
+
+```{r echo=F, eval=T,warning=FALSE, message=FALSE, results='asis'}
+
+for(i in 1:nrow(survey)){
+  if(q$question_is_categorical(survey[i,"name"])){
+    question_type <- strsplit(as.character(survey[i,"type"]), split = " ") %>% unlist()
+  
+    cat("**",q$question_get_question_label(survey[i,"name"]),"**", "  (",question_type[1], ")", sep = "")
+    cat("\n")
+    cat("\n")
+    cat(as.character(choices[choices[["list_name"]]==question_type[2],"label"]), " ",sep = "  [...]  ")
+    cat("\n")
+    cat("\n")
+  } else{
+    if(survey[i,1] %in% c("note", "begin group", "begin_group")&& survey[i,"label"] !=""){
+      cat("**",q$question_get_question_label(survey[i,"name"]), "**", sep = "")
+      cat("\n")
+      cat("\n")
+    } else{
+    if(survey[i,"label"] !=""){
+    cat("**",q$question_get_question_label(survey[i,"name"]), "**", "   (",as.character(survey[i,"type"]),")", sep = "")
+    cat("\n\n....................................\n\n")
+    }}
+  }
+}
+
+```

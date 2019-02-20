@@ -11,11 +11,13 @@ To be able to use `xlsform_to_html` you will need:
 - R: download here: (https://cran.rstudio.com/). 
 
 - R Studio (https://www.rstudio.com/products/rstudio/download/#download)
-## Folders
+## Folders and files
 
 Input: put your survey and choices files in csv format.
 
-Internal: source code 
+Internal: source code   
+
+run_me.R: R script to be executed.  
 
 questionnaire.html: Output of the script.
 

@@ -26,8 +26,8 @@ run<-function(parameters){
     survey <- read.csv(parameters$survey)
     choices <- read.csv(parameters$choices)
     
-    names(survey) <- sanitize_survey_label(parameters$survey_label,names(survey))
-    names(choices) <- sanitize_choices_label_listname(parameters$choices_label,names(choices))
+    names(survey) <- sanitise_survey_label(parameters$survey_label,names(survey))
+    names(choices) <- sanitise_choices_label_listname(parameters$choices_label,names(choices))
     
     
     q <- load_questionnaire_without_data(questions.file = parameters$survey,

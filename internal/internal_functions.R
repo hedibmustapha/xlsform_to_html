@@ -26,13 +26,13 @@ file.opened <- function(path) {
 }
 
 
-sanitize_survey_label <- function(original_label, survey_names){
+sanitise_survey_label <- function(original_label, survey_names){
   original_label <- sub("::", "..", original_label)
   survey_names <- sub(original_label, "label", survey_names)
   return(survey_names)
 }
 
-sanitize_choices_label_listname <- function(original_label,choices_names){
+sanitise_choices_label_listname <- function(original_label,choices_names){
   choices_names <- sub("^list[\\._]name$", "list_name", choices_names)
   original_label <- sub("::", "..", original_label)
   choices_names <- sub(original_label, "label", choices_names)

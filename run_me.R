@@ -19,13 +19,14 @@ parameters<-list()
 
 
 # NAME YOUR QUESTIONNAIRE
-parameters$title<- "Libya Multi-Sector Needs Assessment 2018" 
+parameters$title<- "Area Based Approach Assessment 2019" 
 
 # WHERE ARE YOUR SURVEY AND CHOICES CSV SHEETS (EDIT YOUR CHANGES AFTER ./input/)
 parameters$survey<-"./input/aba_questionnaire.csv"
 parameters$choices<-"./input/aba_choices.csv"
 
-# YOUR CHOICES AND SURVEY LABELS TO USE (e.g: "label", "label::French", "label::English (en)")
+# YOUR CHOICES AND SURVEY LABELS TO USE (e.g: "label", "label::French", "label::English (en)") IF YOU HAVE MULTIPLE 
+# LABLES COLUMNS LANGUAGE PUT THE DESIRED LABEL COLUMN BEFORE ALL OTHER LABEL COLUMNS IN YOUR CSV FILE
 parameters$choices_label <- "label::Arabic"
 parameters$survey_label <- "label::Arabic"
 

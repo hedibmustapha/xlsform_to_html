@@ -27,7 +27,7 @@ questionnaire.html: Output of the script.
 ```
 parameters$title <- ""  
 ```
-The title of your questionnaire (will be placed on the top center on the output)
+The title of your questionnaire (will appear on the top center on the output)
 
 ```
 parameters$survey<-""  
@@ -38,7 +38,7 @@ The path to your input data files
 parameters$choices_label<-""
 parameters$survey_label<-""
 ```
-Columns' name to use to extract all the questions and chocies. **IF YOU USE MORE THAN ONE LANGUAGE IN YOUR SURVEY, YOU NEED TO MOVE YOUR COLUMN OF INTEREST BEFORE THE OTHER LABEL COLUMNS IN YOUR CSV FILES**   
+Columns' name to use to extract all the questions and choices. **IF YOU USE MORE THAN ONE LANGUAGE IN YOUR SURVEY, YOU NEED TO MOVE YOUR COLUMN OF INTEREST BEFORE THE OTHER LABEL COLUMNS IN YOUR CSV FILES**   
 ```
 parameters$right_to_left <- TRUE/FALSE
 ```
@@ -48,7 +48,7 @@ parameters$local_language <- ""
 ```
 Keep it empty if the output text does not contain any special characters.
 
-After initializing all the parameters source the script, wait until the end of the execution. The results is the questionnaire.html.
+After initializing all the parameters source the script, wait until the end of the execution. The result is the questionnaire.html.
 
 ## R packages used
 - devtools
